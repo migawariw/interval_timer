@@ -144,7 +144,7 @@ function updateTime() {
     timeDisplay.textContent = `${String(Math.floor(elapsed/60)).padStart(2,'0')}:${String(elapsed%60).padStart(2,'0')}`;
 
     // 30秒ごとの効果音
-    const beepCount = Math.floor(elapsed / 3);
+    const beepCount = Math.floor(elapsed / 30);
     if (beepCount > lastBeepCount) {
         playBeep();
         lastBeepCount = beepCount;
